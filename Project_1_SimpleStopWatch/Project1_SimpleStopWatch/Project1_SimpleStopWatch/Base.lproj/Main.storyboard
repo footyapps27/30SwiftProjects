@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project1_SimpleStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="vwTimer" translatesAutoresizingMaskIntoConstraints="NO" id="lir-Nw-cW4" userLabel="vwTimer">
+                                <rect key="frame" x="0.0" y="20" width="600" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GgA-Si-u0c" userLabel="lblTimer">
+                                        <rect key="frame" x="190" y="110" width="220" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="cuL-z0-N5X"/>
+                                            <constraint firstAttribute="height" constant="80" id="zFH-9O-szY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GgA-Si-u0c" firstAttribute="centerX" secondItem="lir-Nw-cW4" secondAttribute="centerX" id="Nbl-c0-6f0"/>
+                                    <constraint firstItem="GgA-Si-u0c" firstAttribute="centerY" secondItem="lir-Nw-cW4" secondAttribute="centerY" id="cMa-fc-Rvw"/>
+                                    <constraint firstAttribute="height" constant="300" id="fTn-0T-vD5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tS5-j1-4kZ" userLabel="vwPause">
+                                <rect key="frame" x="300" y="320" width="300" height="280"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2S-GX-pNt" userLabel="btnPause">
+                                        <rect key="frame" x="75.5" y="65" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="D2q-0F-Ym5"/>
+                                            <constraint firstAttribute="width" constant="150" id="qAD-h1-IQt"/>
+                                        </constraints>
+                                        <state key="normal" image="Pause"/>
+                                        <connections>
+                                            <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y7p-sH-vI0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="u2S-GX-pNt" firstAttribute="centerY" secondItem="tS5-j1-4kZ" secondAttribute="centerY" id="4Zk-3V-dOY"/>
+                                    <constraint firstItem="u2S-GX-pNt" firstAttribute="centerX" secondItem="tS5-j1-4kZ" secondAttribute="centerX" id="xp6-9g-EhM"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eji-u6-bZh" userLabel="vwPlay">
+                                <rect key="frame" x="0.0" y="320" width="300" height="280"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwd-EX-W1r" userLabel="btnPlay">
+                                        <rect key="frame" x="74.5" y="65" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="qqV-3Z-LON"/>
+                                            <constraint firstAttribute="height" constant="150" id="vzR-hy-BkQ"/>
+                                        </constraints>
+                                        <state key="normal" image="Play"/>
+                                        <connections>
+                                            <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iF0-8K-Pnv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="zwd-EX-W1r" firstAttribute="centerY" secondItem="eji-u6-bZh" secondAttribute="centerY" id="Zra-In-TOQ"/>
+                                    <constraint firstItem="zwd-EX-W1r" firstAttribute="centerX" secondItem="eji-u6-bZh" secondAttribute="centerX" id="g8O-rm-1aY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eji-u6-bZh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="0DA-IQ-nVo"/>
+                            <constraint firstItem="lir-Nw-cW4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CQD-Rf-LpA"/>
+                            <constraint firstItem="eji-u6-bZh" firstAttribute="width" secondItem="tS5-j1-4kZ" secondAttribute="width" id="H0P-b6-ova"/>
+                            <constraint firstItem="tS5-j1-4kZ" firstAttribute="top" secondItem="lir-Nw-cW4" secondAttribute="bottom" id="Mp2-nZ-wfq"/>
+                            <constraint firstItem="eji-u6-bZh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="STL-bd-lw8"/>
+                            <constraint firstItem="lir-Nw-cW4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UQa-kf-uNy"/>
+                            <constraint firstItem="eji-u6-bZh" firstAttribute="top" secondItem="lir-Nw-cW4" secondAttribute="bottom" id="XIv-8r-7lc"/>
+                            <constraint firstAttribute="trailing" secondItem="lir-Nw-cW4" secondAttribute="trailing" id="XRw-ns-72w"/>
+                            <constraint firstAttribute="trailing" secondItem="tS5-j1-4kZ" secondAttribute="trailing" id="YMA-Lg-aAh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tS5-j1-4kZ" secondAttribute="bottom" id="eDb-Ek-IaC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eji-u6-bZh" secondAttribute="bottom" id="nqB-kH-ofX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblTimer" destination="GgA-Si-u0c" id="LKu-xL-csU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pause" width="170" height="170"/>
+        <image name="Play" width="170" height="170"/>
+    </resources>
+</document>
