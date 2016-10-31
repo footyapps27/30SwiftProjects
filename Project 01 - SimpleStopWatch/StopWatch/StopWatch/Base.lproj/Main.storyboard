@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eB4-q3-r4n" userLabel="stackVwControl">
+                                <rect key="frame" x="0.0" y="268" width="375" height="399"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRp-3G-U81" userLabel="vwPlay">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="399"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghv-Xs-zTA" userLabel="btnPlay">
+                                                <rect key="frame" x="54" y="159.5" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="454-ZC-8fy"/>
+                                                    <constraint firstAttribute="height" constant="80" id="UlG-py-Pzq"/>
+                                                </constraints>
+                                                <state key="normal" image="Play"/>
+                                                <connections>
+                                                    <action selector="playTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EtH-Hm-a1p"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Ghv-Xs-zTA" firstAttribute="centerY" secondItem="rRp-3G-U81" secondAttribute="centerY" id="C7c-aw-5iT"/>
+                                            <constraint firstItem="Ghv-Xs-zTA" firstAttribute="centerX" secondItem="rRp-3G-U81" secondAttribute="centerX" id="cXK-eA-4k3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7l-jI-xkh" userLabel="vwPause">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="399"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iP6-Jf-XFC" userLabel="btnPause">
+                                                <rect key="frame" x="54" y="159.5" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="dVV-xv-8HH"/>
+                                                    <constraint firstAttribute="width" constant="80" id="jap-wU-gKc"/>
+                                                </constraints>
+                                                <state key="normal" image="Pause"/>
+                                                <connections>
+                                                    <action selector="pauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJu-hC-DSn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="iP6-Jf-XFC" firstAttribute="centerY" secondItem="e7l-jI-xkh" secondAttribute="centerY" id="RSy-vi-9H2"/>
+                                            <constraint firstItem="iP6-Jf-XFC" firstAttribute="centerX" secondItem="e7l-jI-xkh" secondAttribute="centerX" id="nK3-Vl-Luu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zk-nh-eb1" userLabel="vwDisplay">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdQ-sD-7EI">
+                                        <rect key="frame" x="92.5" y="39.5" width="190" height="190"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="190" id="MCC-BW-w84"/>
+                                            <constraint firstAttribute="height" constant="190" id="Nnn-eh-DD6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="63"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="8qE-Pd-XUd"/>
+                                    <constraint firstItem="AdQ-sD-7EI" firstAttribute="centerY" secondItem="6Zk-nh-eb1" secondAttribute="centerY" id="IM1-Q4-yVG"/>
+                                    <constraint firstItem="AdQ-sD-7EI" firstAttribute="centerX" secondItem="6Zk-nh-eb1" secondAttribute="centerX" id="YOy-j2-fW8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eB4-q3-r4n" firstAttribute="top" secondItem="6Zk-nh-eb1" secondAttribute="bottom" id="6js-nI-5ow"/>
+                            <constraint firstAttribute="trailing" secondItem="eB4-q3-r4n" secondAttribute="trailing" id="B6r-iW-HxG"/>
+                            <constraint firstAttribute="trailing" secondItem="6Zk-nh-eb1" secondAttribute="trailing" id="Fxr-cr-244"/>
+                            <constraint firstItem="6Zk-nh-eb1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ifl-Gi-vuT"/>
+                            <constraint firstItem="6Zk-nh-eb1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aer-l1-NUs"/>
+                            <constraint firstItem="eB4-q3-r4n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fLT-IW-BEa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eB4-q3-r4n" secondAttribute="bottom" id="ttb-sA-kcS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPause" destination="iP6-Jf-XFC" id="J07-Np-kmN"/>
+                        <outlet property="btnPlay" destination="Ghv-Xs-zTA" id="7aC-ll-Gcd"/>
+                        <outlet property="lblDisplayTimer" destination="AdQ-sD-7EI" id="KEg-I0-VCF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204" y="103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Pause" width="42" height="56"/>
+        <image name="Play" width="48" height="61"/>
+    </resources>
+</document>
