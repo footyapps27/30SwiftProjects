@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        btnChangeFont.layer.cornerRadius = 70
+        btnChangeFont.layer.cornerRadius = 0.5 * btnChangeFont.bounds.size.width
     }
 
     override func didReceiveMemoryWarning() {
